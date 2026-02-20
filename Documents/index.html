@@ -1,0 +1,89 @@
+<div id="auth-page" class="auth-overlay">
+    <div class="auth-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/1200px-Flag_of_Guinea.svg.png" width="60" style="margin-bottom:10px;">
+        <h2>Guinée Web</h2>
+        <p>Rejoignez la communauté 🇬🇳</p>
+        <div class="auth-form">
+            <input type="text" placeholder="Nom complet">
+            <input type="tel" placeholder="Numéro de téléphone">
+            <input type="password" placeholder="Mot de passe">
+            <button class="btn-primary" onclick="login()">S'inscrire et Entrer</button>
+        </div>
+    </div>
+</div>
+
+<header id="main-header" style="display:none;">
+    <div class="logo-section">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/1200px-Flag_of_Guinea.svg.png" class="drapeau">
+        <span>Guinée Web</span>
+    </div>
+    <nav>
+        <div class="nav-item active" id="btn-accueil" onclick="showPage('accueil')">
+            <i class="fas fa-home"></i> Accueil
+        </div>
+        <div class="nav-item" id="btn-shorts" onclick="showPage('shorts')">
+            <i class="fas fa-plus-square"></i> Shorts
+        </div>
+        <div class="nav-item" id="btn-messages" onclick="showPage('messages')">
+            <i class="fas fa-comment"></i> Messages
+        </div>
+        <div class="nav-item" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> Menu
+        </div>
+    </nav>
+</header>
+
+<main class="main-content" id="main-app" style="display:none;">
+    
+    <section id="page-accueil" class="page">
+        <div class="story-circles">
+            <div class="circle add-story"><i class="fas fa-plus"></i></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="card card-3d">
+            <div class="post-header"><strong>Admin Guinée Web</strong></div>
+            <div class="photo-3d-container">
+                <img src="https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?auto=format&fit=crop&w=500&q=80" class="img-3d">
+            </div>
+            <p>Bienvenue ! Touchez la photo pour l'effet 3D. 🇬🇳</p>
+        </div>
+    </section>
+
+    <section id="page-shorts" class="page" style="display:none;">
+        <div class="video-container-3d">
+            <div class="video-player-mock">
+                <i class="fas fa-play fa-3x"></i>
+                <div class="video-info-overlay">
+                    <strong>@Createur_GN</strong>
+                    <p>Ceci est ma première vidéo !</p>
+                </div>
+                <div class="short-actions-3d">
+                    <div class="action-btn"><i class="fas fa-heart"></i><span>24k</span></div>
+                    <div class="action-btn"><i class="fas fa-comment"></i><span>150</span></div>
+                    <div class="action-btn"><i class="fas fa-share"></i><span>Partager</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-messages" class="page" style="display:none;">
+        <h3 style="padding-left:10px;">Messages</h3>
+        <div class="msg-item"><strong>Moussa :</strong> Salut ! L'appli est top.</div>
+        <div class="msg-item"><strong>Diallo :</strong> On se voit à Conakry ?</div>
+    </section>
+
+</main>
+
+<div id="language-overlay" class="overlay">
+    <div class="modal">
+        <h3><i class="fas fa-cog"></i> Paramètres</h3>
+        <div class="lang-option" onclick="changeLang('Français')">🌐 Langue : Français</div>
+        <div class="lang-option">🔒 Confidentialité</div>
+        <div class="lang-option" style="color:#ce1126;">🚪 Déconnexion</div>
+        <button class="close-btn" onclick="toggleMenu()">Retourner à l'appli</button>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
